@@ -59,7 +59,7 @@ header{
     right: 40px;
     width: 50px;
     height: 50px;
-    background: #fff url(../CocaCola/icons/up.png);
+    background: #fff url(../CaioemanuelIF.github.io/icons/up.png);
     border-radius: 50%;
     background-size: 30px;
     background-position: center;
@@ -612,7 +612,7 @@ section .products{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../CocaCola/imgs/mahbod-akhzami-VM6uuMFPIGM-unsplash.jpg);
+    background-image: url(../CaioemanuelIF.github.io/imgs/mahbod-akhzami-VM6uuMFPIGM-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
