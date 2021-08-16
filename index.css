@@ -326,17 +326,16 @@ header{
 }
 .nav-list{
     display: flex;
+    align-items: center;
 }
 .navbar li{
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 3px;
     margin-left: 10px;
     list-style: none;
     width: 200px;
     height: 50px;
-    border-radius: 20px;
 }
 .navbar a{
     display: flex;
@@ -345,15 +344,25 @@ header{
     width: 100%;
     height: 100%;
 }
+.navbar .options p{
+    padding-bottom: 15px;
+}
+.navbar .options:hover p{
+    color: red;
+}
 
-.navbar li:hover{
-    border: 1px solid whitesmoke;
-
+.options p svg {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
 }
 /*dropdown list*/
 .dropdown{
     position: relative;
     display: inline-block;
+}
+.dropdown li {
+    height: 100px; 
 }
 
 .dropdown-content{
@@ -561,7 +570,8 @@ header{
         right: 0;
         width: 50vw;
         height: 92vh;
-        background: rgb(185, 0, 0);
+        background: rgb(24, 24, 24);
+        border-radius: 10px;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -575,9 +585,6 @@ header{
     .mobile-menu {
         display: block;
     }
-    .nav-list a:hover{
-        border-bottom: 1px solid white;
-    }
     .navbar #options:hover{
         transform: scale(1);
     }
@@ -588,9 +595,10 @@ header{
         display: none;
         overflow: hidden;
     }
-    .navbar li:hover{
-        background-color: rgba(0, 0, 0, 0);
+    .options p svg {
+        display: none;
     }
+
 }
 .nav-list.active{
     transform: translateX(0);
