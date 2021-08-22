@@ -886,3 +886,38 @@ footer {
         justify-content: space-around;
     }
 }
+
+/* ini: Preloader */
+ 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#df0000; /* cor do background que vai ocupar o body */
+    z-index:9999999; /* z-index para jogar para frente e sobrepor tudo */
+}
+#preloader .inner {
+    position: absolute;
+    top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fade-out 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both; 
+}
+@keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+.inner p{
+    color: white;
+    font-size: 90px;
+    font-family: 'CocaCola';    
+}
+/* end: Preloader */

@@ -11,6 +11,14 @@
     <title>Coca-Cola - Home</title>
 </head>
 <body>
+  <!--preloader-->
+  <div id="preloader">
+    <div class="inner">
+        <p>C</p>
+    </div>
+  </div>
+
+  <!--preloader ends-->
   <div class="scrollTop" onclick="scrollToTop()"></div>
     <header class="header">
         <div class="Title">
@@ -276,30 +284,16 @@
       </div>
       
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../CaioemanuelIF.github.io/scripts/loading.js"></script>
+
     <script src="../CaioemanuelIF.github.io/index.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-          rotate: 20,
-          stretch: 0,
-          depth: 1000,
-          modifier: 1,
-          slideShadows: false,
-        },
-        loop: true,
-          autoplay: {
-            delay:6800,
-            disableOnInteraction: false,
-          },
-      });
-    </script>
+    <script src="../CaioemanuelIF.github.io/scripts/carousel.js"></script>
+
+    
+
 
 </body>
 </html>
