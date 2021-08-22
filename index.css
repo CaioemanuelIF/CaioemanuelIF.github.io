@@ -53,7 +53,7 @@ header{
 /*Scroll-to-top-btn*/
 
 .scrollTop {
-    z-index: 4000;
+    z-index: 10000000;
     position: fixed;
     bottom: 800px;
     right: 40px;
@@ -71,7 +71,7 @@ header{
     filter: invert(100%) ;
 }
 .scrollTop.active{
-    z-index: 4000;
+    z-index: 1000000;
     bottom: 40px;
     visibility: visible;
     opacity: 1;      
