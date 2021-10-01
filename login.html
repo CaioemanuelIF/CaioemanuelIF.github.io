@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="sign-up.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../CaioemanuelIF.github.io/imgs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../CaioemanuelIF.github.io/imgs/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in | Coca-Cola</title>
+    <title>Coca-Cola Sign Up</title>
 </head>
 <body>
-    
+    <section class="light">
+        <div class="title">
+            <p>Create an Account</p>
+        </div>
+        <div class="inputs-info">
+            <div class="label-inputs">
+            
+                <div class="other-inputs"> 
+                    <div class="email-input">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" class="email-address" maxlength="200" aria-required="true" autofocus="autofocus">
+                    </div>
+                    <div class="password-input">
+                        <label for="password">Password</label>
+                        <input type="password" class="password" maxlength="200" aria-required="true" autofocus="autofocus">
+                    </div>
+                
+                </div>
+            </div>
+     
+        </div>
+
+        <div class="collumn">
+            <div class="buttons">
+                <div class="button"> 
+                    <div id="btn-account">
+                    <a href="#"><p>Login Account</p></a>
+                    </div>
+                </div>
+            </div>
+          
+       </div>
+    </section>
+    <script>
+        function maxLengthCheck(object) {
+            if (object.value.length > object.maxLength)
+            object.value = object.value.slice(0, object.maxLength)
+        }
+            
+        function isNumeric (evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode (key);
+            var regex = /[0-9]|\./;
+            if ( !regex.test(key) ) {
+            theEvent.returnValue = false;
+            if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+      </script>
 </body>
 </html>
