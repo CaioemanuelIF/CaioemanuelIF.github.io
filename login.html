@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="sign-up.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
     <link rel="icon" type="image/png" sizes="32x32" href="../CaioemanuelIF.github.io/imgs/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../CaioemanuelIF.github.io/imgs/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,23 +14,30 @@
         <div class="title">
             <p>Create an Account</p>
         </div>
-        <div class="inputs-info">
+        <div id="error"></div>
+        <form class="inputs-info" action="/" method="GET">
             <div class="label-inputs">
             
                 <div class="other-inputs"> 
                     <div class="email-input">
                         <label for="email-address">Email Address</label>
-                        <input type="email" class="email-address" maxlength="200" aria-required="true" autofocus="autofocus">
+                        <input type="email" id="email" maxlength="80" placeholder="Enter Email" onkeydown="validation()">
                     </div>
                     <div class="password-input">
                         <label for="password">Password</label>
-                        <input type="password" class="password" maxlength="200" aria-required="true" autofocus="autofocus">
+                        <div class="input-border">
+                            <input type="password" name="" placeholder="Enter Password" maxlength="50"aria-required="true" autofocus="autofocus" id="password">
+                            <div id="toggle" 
+                            onclick="showHide();">
+                            </div>
+                        </div>
+                        
                     </div>
                 
                 </div>
             </div>
      
-        </div>
+        </form>
 
         <div class="collumn">
             <div class="buttons">
@@ -59,6 +66,53 @@
             if(theEvent.preventDefault) theEvent.preventDefault();
             }
         }
-      </script>
+        </script>
+
+        <script type="text/javascript">
+        const password = document.getElementById('password');
+        const toggle = document.getElementById('toggle');
+
+        function showHide(){
+            if (password.type === 'password'){
+                password.setAttribute('type', 'text');
+                toggle.classList.add('hide')
+            }
+            else {
+                password.setAttribute('type', 'password');
+                toggle.classList.remove('hide')
+            }
+        }
+        </script>
+        <script type="text/javascript">
+            function validation()
+            {
+                var form = document.getElementById ("form");
+                var email= document.getElementById ("email").value;
+                var text = document.getElementById ("text");
+                var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+                if (email.match(pattern))
+                {
+                    form.classList.add("valid");
+                    form.classList.remove("invalid");
+                    text.innerHTML = "Your Email Address is valid.";
+                    text.style.color = "#00ff00";
+                }
+                else
+                {
+                    form.classList.remove("valid");
+                    form.classList.add("invalid");
+                    text.innerHTML = "Please enter a valid Email.";
+                    text.style.color = "#ff0000";
+                }
+                if (email == "")
+                {
+                    form.classList.remove("valid");
+                    form.classList.remove("invalid");
+                    text.style.color = "#00ff00";
+                }
+            }
+
+        </script>
 </body>
 </html>
