@@ -127,7 +127,7 @@ input [type=password].invalid{
     transform: translateX(80%);
     width: 24px;
     height: 24px;  
-    background: url(../CaioemanuelIF.github.io/icons/eye-w.png);
+    background: url(../icons/eye-w.png);
     background-size: contain;
     cursor: pointer;
     opacity: 1;
@@ -135,7 +135,7 @@ input [type=password].invalid{
 #toggle.hide{
     width: 24px;
     height: 24px; 
-    background: url(../CaioemanuelIF.github.io/icons/hidden.png);
+    background: url(../icons/hidden.png);
     background-size: contain;
 }
 /*-----------------------------*/
